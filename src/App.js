@@ -14,7 +14,11 @@ function App() {
   return (
     <div className="App">
       <Sidebar />
-      <PokemonGrid />
+      <div className='pokemon-side'>
+        {/* header + filter side, need to have this in a div so that way the whole div will scroll, not just the grid (dont want the filter and title to remain while we scroll) */}
+        <PokemonGrid />
+
+      </div>
     </div>
   );
 }
