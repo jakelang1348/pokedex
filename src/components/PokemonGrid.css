@@ -1,0 +1,7 @@
+.pokemon-grid {
+    display: grid;
+    margin-left: 15vw;
+    width: calc(100vw - 10vw);
+    grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
+
+}
