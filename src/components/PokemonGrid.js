@@ -20,7 +20,6 @@ async function getPokemon(pokemon) {
 
 
 function PokemonGrid() {
-  const [region, setRegion] = useState();
   const [pokemonArray, setPokemonArray] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
