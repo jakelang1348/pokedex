@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './PokemonGrid.css';
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 // Function to fetch Pokémon data
 async function getPokemon(pokemon) {
@@ -20,7 +20,9 @@ async function getPokemon(pokemon) {
 
 
 function PokemonGrid() {
+  const [region, setRegion] = useState();
   const [pokemonArray, setPokemonArray] = useState([]);
+  const navigate = useNavigate();
   useEffect(() => {
     async function fetchPokemon() {
       const promises = [];
@@ -34,8 +36,9 @@ function PokemonGrid() {
   }, []);
 
   function handleClick(pokemon) {
-    let path = `/${pokemon}`;
-    
+    let path = `/${pokemon.name}`;
+    navigate(path);
+
   } 
 
   

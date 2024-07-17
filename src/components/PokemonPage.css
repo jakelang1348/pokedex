@@ -1,8 +1,41 @@
 .pokemon-container {
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: [col1-start] 100px [col2-start] 100px [col3-start] 100px;
-    grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     background-color: #fff;
     color: #444;
+    height: 100vh;
+    width: 100vw;
+}
+
+.pokemon-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.pokemon-description {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.pokemon-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.pokemon-image img {
+    width: 100%; /* This will make the image width 100% of its container */
+    height: 100%; /* This will make the image height 100% of its container */
+    object-fit: contain;
+}
+
+.pokemon-stats-chart {
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
 }
