@@ -1,9 +1,28 @@
 .pokemon-grid {
     display: grid;
-    
+    text-align: center;
     grid-area: pokemon;
     width: 90vw;
-    height: 100vh;
-    grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+    height:95vh;
+    grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
     overflow:auto; /* FIX FOR SIDEBAR NOT REMAINING IN PLACE */
+}
+
+h3, p {
+    margin-top: 1%;
+}
+h3 {
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+  }
+p {
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+  }
+
+.pokemon-entry {
+    flex: auto;
+    align-items: center;
+    cursor: pointer;
+    margin: 1vw;
 }

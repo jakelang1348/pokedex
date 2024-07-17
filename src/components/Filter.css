@@ -1,0 +1,26 @@
+.filter-container {
+    display: flex;
+    grid-area: filter;
+    flex-direction: row;
+    width: 90vw;
+    height: 3vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.filter-object {
+    flex-grow: 1;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-object button {
+    display: block;
+    margin: 0 auto;
+}
+
+.filter-object select {
+    color: red;
+}
