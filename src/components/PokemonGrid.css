@@ -6,6 +6,7 @@
     height:95vh;
     grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
     overflow:auto; /* FIX FOR SIDEBAR NOT REMAINING IN PLACE */
+    background-color: rgb(255, 255, 255);
 }
 
 h3, p {
@@ -24,5 +25,9 @@ p {
     flex: auto;
     align-items: center;
     cursor: pointer;
-    margin: 1vw;
+    margin: 0.2vh;
+    border-style: inset;
+    background-color: rgb(190, 147, 147);
+    border-radius: 0.5vh; /* makes the edges slightly rounded */
+
 }
