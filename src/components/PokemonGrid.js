@@ -19,20 +19,41 @@ async function getPokemon(pokemon) {
 
 
 
-function PokemonGrid() {
+function PokemonGrid( {regionFilter} ) {
   const [pokemonArray, setPokemonArray] = useState([]);
+
+  //region filtering
+  let start = 1, end = 494;
+  if (regionFilter === 'all') {
+    start = 1; end = 494;
+  }
+  else if (regionFilter === 'kanto') {
+    start = 1; end = 152;
+  }
+  else if (regionFilter === 'johto') {
+    start = 152; end = 252;
+  }
+  else if (regionFilter === 'hoenn') {
+    start = 252; end = 387;
+  }
+  else if (regionFilter === 'sinnoh') {
+    start = 387; end = 494;
+  }
+
+
   const navigate = useNavigate();
+
   useEffect(() => {
     async function fetchPokemon() {
       const promises = [];
-      for (let i = 1; i < 494; ++i) {
+      for (let i = start; i < end; ++i) {
         promises.push(getPokemon(i));
       }
       const results = await Promise.all(promises);
       setPokemonArray(results);
     }
     fetchPokemon();
-  }, []);
+  }, [regionFilter]);
 
   function handleClick(pokemon) {
     let path = `/${pokemon.name}`;
